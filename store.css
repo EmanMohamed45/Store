@@ -1,0 +1,689 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Start header */
+.header {
+  height: 70px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header .container .logo img {
+  width: 70px;
+  margin-top: -20px;
+}
+
+.header .container .links ul {
+  display: flex;
+  list-style: none;
+}
+
+.header .container .links ul li {
+  padding: 0 18px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.header .container .links ul li a {
+  color: black;
+  transition: 0.2s;
+}
+
+.header .container .links ul li a:hover {
+  border-bottom: 2px solid black;
+  letter-spacing: 1.3px;
+}
+
+/* End header */
+/* Start home page */
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 140px);
+  margin-bottom: 70px;
+}
+
+.home {
+  padding: 0;
+  background: url("Images/happy-dark-skinned-woman-wears-wired-headphones-enjoys-nice-music-looks-away-has-toothy-smile.jpg");
+  background-size: cover;
+}
+
+.home .intro h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home .intro p {
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+.home .intro .code {
+  text-transform: capitalize;
+  border: 2px dashed black;
+  width: fit-content;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.home .intro .code:hover {
+  background-color: black;
+  color: white;
+}
+
+/* End home page */
+/* Start Cooming Soon page */
+.gallery {
+  border-top: 3px solid rgb(237 188 57);
+  padding: 70px 0;
+  border-bottom: 3px solid rgb(237 188 57);
+}
+
+.specialHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialHeader h3 {
+  padding: 25px 5px;
+  font-size: 50px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(237 188 57);
+  border-radius: 50%;
+}
+
+.gallery .container {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery .imgbox {
+  width: calc(98% / 3);
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.gallery .container .imgbox::before {
+  position: absolute;
+  content: "🤍";
+  font-size: 20px;
+  z-index: 20;
+  margin-left: 5px;
+}
+
+.gallery .container .imgbox:hover:before {
+  content: "💛";
+}
+
+.gallery .container .imgbox::after {
+  position: absolute;
+  content: "Add To Cart";
+  width: 85px;
+  height: 20px;
+  background-color: rgb(247 208 100 / 77%);
+  z-index: 4;
+  bottom: 190px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.gallery .container .imgbox:hover:after {
+  opacity: 1;
+}
+
+/* End Cooming Soon page */
+/* Start Trindig Products page */
+.best {
+  padding: 70px 0;
+  border-bottom: 3px solid rgb(237 188 57);
+}
+
+.best .bigbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.best .imgbox {
+  margin: 0 30px 20px;
+  position: relative;
+}
+
+/* .best .imgbox::after {
+    position: absolute;
+    content: "Add To Cart"; 
+    width: 85px;
+    height: 20px;
+    background-color: rgb(247, 208, 100);
+    z-index: 4;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transform: translate(-50%);
+} */
+
+.best .imgbox:hover::after {
+  background-color: black;
+  color: white;
+}
+
+.best .bigbox img {
+  width: 150px;
+  box-shadow: 2px -2px 10px -2px rgba(99, 99, 99, 0.2);
+}
+
+.best .imgbox > span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #0a7ef0;
+}
+
+.best .imgbox .price {
+  margin-bottom: 15px;
+}
+
+.best .imgbox .price .currency {
+  font-size: 13px;
+  color: #ff9800;
+}
+
+.best .imgbox .price .money {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* End Trindig Products page */
+/* Start contact page */
+iframe {
+  width: 100%;
+  height: 40vh;
+}
+
+.contact {
+  border-top: 3px solid rgb(237 188 57);
+  font-weight: bold;
+  color: rgb(247, 208, 100);
+  color: black;
+  height: 25vh;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact img {
+  width: 80px;
+}
+
+.contact a {
+  color: black;
+  margin-right: 15px;
+}
+
+.contact a:hover {
+  color: rgb(247, 208, 100);
+}
+
+/* End contact page */
+
+.favorite-icon {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.favorite-icon.favorited {
+  color: #f35938;
+}
+.imgbox:hover .favorite-icon {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+.clear-filters {
+  display: inline-block;
+  margin-left: 10px;
+  color: #f35938;
+  text-decoration: none;
+  font-weight: bold;
+}
+.clear-filters:hover {
+  text-decoration: underline;
+}
+
+/* Adjusted Add to Cart Button */
+.add-to-cart {
+  width: 120px;
+  background-color: #f7d064;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 10px auto 0; /* لتوسيط الزر وإضافة مسافة من الأعلى */
+  transition: background-color 0.3s, color 0.3s;
+}
+.add-to-cart:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Cart Page Styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 170px; /* Matches .best .bigbox img */
+  box-shadow: 2px -2px 10px -2px rgba(99, 99, 99, 0.2); /* Matches .best .bigbox img */
+}
+
+.cart-details {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.cart-details .price .currency {
+  font-size: 13px;
+  color: #ff9800; /* Matches .best .imgbox .price .currency */
+}
+
+.cart-details .price .money {
+  font-weight: bold;
+  font-size: 18px; /* Matches .best .imgbox .price .money */
+}
+
+.quantity {
+  margin-top: 10px;
+}
+
+.quantity input {
+  width: 60px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.remove-from-cart {
+  background-color: rgb(247, 208, 100); /* Matches site theme */
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.remove-from-cart:hover {
+  background-color: rgb(237, 188, 57); /* Slightly darker shade */
+  color: white;
+}
+
+.cart-total {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.cart-total h4 {
+  text-align: center;
+}
+
+.checkout-btn {
+  background-color: rgb(247, 208, 100); /* Matches site theme */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.checkout-btn:hover {
+  background-color: rgb(237, 188, 57); /* Slightly darker shade */
+  color: white;
+}
+.subtotal {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff9800; /* نفس لون العملة */
+}
+
+/* Filter form container */
+.filter-form {
+  background: #f9f9f9; /* Light grey background, matching product cards */
+  border: 1px solid #e0e0e0; /* Matching product card border */
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 1000px; /* Wider for horizontal layout */
+  margin: 20px auto; /* Center horizontally */
+  font-family: "Cairo", sans-serif;
+}
+
+/* Form styling */
+#filter-form {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  gap: 20px; /* Space between form sections */
+  align-items: flex-start; /* Align items at the top */
+}
+
+/* Form section (grouping categories, price, sort) */
+#filter-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px; /* Minimum width for each section */
+}
+
+/* Labels */
+#filter-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333333; /* Dark text from product cards */
+}
+
+/* Checkboxes (categories) */
+#filter-form input[type="checkbox"] {
+  margin-right: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#filter-form input[type="checkbox"] + span {
+  font-size: 0.85rem;
+  color: #555555; /* Secondary text from product cards */
+  vertical-align: middle;
+}
+
+/* Checkbox container */
+#filter-form input[type="checkbox"] + br {
+  line-height: 1.6; /* Space between checkboxes */
+}
+
+/* Number inputs (min_price, max_price) */
+#filter-form input[type="number"] {
+  width: 120px; /* Fixed width for compact layout */
+  padding: 6px 8px;
+  border: 1px solid #cccccc; /* Border color from product cards */
+  border-radius: 5px;
+  font-family: "Cairo", sans-serif;
+  font-size: 0.85rem;
+  color: #333333;
+  background: #ffffff; /* White background from inputs */
+  transition: border-color 0.3s ease;
+}
+
+#filter-form input[type="number"]:focus {
+  border-color: #3498db; /* Blue focus, matching add-to-cart */
+  outline: none;
+}
+
+#filter-form input[type="number"]::placeholder {
+  color: #999999; /* Placeholder color from product cards */
+}
+
+/* Select dropdown */
+#filter-form select {
+  width: 150px; /* Fixed width for consistency */
+  padding: 6px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-family: "Cairo", sans-serif;
+  font-size: 0.85rem;
+  color: #333333;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+#filter-form select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Filter button */
+#filter-form button[type="submit"] {
+  background: #3498db; /* Blue from add-to-cart */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: "Cairo", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-end; /* Align button with form bottom */
+}
+
+#filter-form button[type="submit"]:hover {
+  background: #2980b9; /* Darker blue from add-to-cart hover */
+}
+
+/* Clear Filters link */
+.clear-filters {
+  font-family: "Cairo", sans-serif;
+  font-size: 0.85rem;
+  color: #e74c3c; /* Red from favorite icon */
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+  align-self: flex-end; /* Align with button */
+}
+
+.clear-filters:hover {
+  color: #c0392b; /* Darker red from favorite icon hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-form {
+    max-width: 100%;
+    margin: 15px 10px;
+    padding: 12px;
+  }
+
+  #filter-form {
+    gap: 15px;
+  }
+
+  #filter-form > div {
+    min-width: 120px;
+  }
+
+  #filter-form input[type="number"] {
+    width: 100px;
+    font-size: 0.8rem;
+    padding: 5px 7px;
+  }
+
+  #filter-form select {
+    width: 130px;
+    font-size: 0.8rem;
+    padding: 5px 7px;
+  }
+
+  #filter-form label {
+    font-size: 0.9rem;
+  }
+
+  #filter-form input[type="checkbox"] + span {
+    font-size: 0.8rem;
+  }
+
+  #filter-form button[type="submit"],
+  .clear-filters {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #filter-form {
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 12px;
+  }
+
+  #filter-form > div {
+    min-width: 100%;
+  }
+
+  #filter-form input[type="number"],
+  #filter-form select {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .filter-form {
+    padding: 10px;
+  }
+}
+
+
+/* Checkout Form */
+#checkout-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group textarea,
+.form-group input[type="radio"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Cairo", sans-serif;
+}
+
+.form-group input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Orders Page */
+.order-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.order-item h4 {
+  margin-bottom: 10px;
+}
+
+.order-item p {
+  margin: 5px 0;
+}
+
+.view-details {
+  background-color: rgb(237 188 57);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-details:hover {
+  background-color: #edad02;
+}
